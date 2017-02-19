@@ -14,7 +14,10 @@ defmodule Koans.Mixfile do
   end
 
   defp deps do
-    [{:exfswatch, "~> 0.3"}]
+    [
+      {:fs, git: "https://github.com/synrc/fs.git", override: true},
+      {:exfswatch, "~> 0.3"}
+    ]
   end
 
   defp elixirc_path(:test), do: ["lib/", "test/support"]
